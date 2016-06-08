@@ -2,6 +2,7 @@ package com.coredevelopers.calculadora_beta;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,34 +16,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText a1 = (EditText) findViewById(R.id.a1);
-        final EditText a2 = (EditText) findViewById(R.id.a2);
-        final EditText a3 = (EditText) findViewById(R.id.a3);
+        final EditText x1 = (EditText) findViewById(R.id.a1);
+        final EditText x2 = (EditText) findViewById(R.id.a2);
+        final EditText x3 = (EditText) findViewById(R.id.a3);
 
-        final EditText b1 = (EditText) findViewById(R.id.b1);
-        final EditText b2 = (EditText) findViewById(R.id.b2);
-        final EditText b3 = (EditText) findViewById(R.id.b3);
+        final EditText y1 = (EditText) findViewById(R.id.b1);
+        final EditText y2 = (EditText) findViewById(R.id.b2);
+        final EditText y3 = (EditText) findViewById(R.id.b3);
 
-        final EditText c1 = (EditText) findViewById(R.id.c1);
-        final EditText c2 = (EditText) findViewById(R.id.c2);
-        final EditText c3 = (EditText) findViewById(R.id.c3);
+        final EditText z1 = (EditText) findViewById(R.id.c1);
+        final EditText z2 = (EditText) findViewById(R.id.c2);
+        final EditText z3 = (EditText) findViewById(R.id.c3);
 
         final Button b_calculo = (Button) findViewById(R.id.b_calculo);
         final TextView resultado = (TextView) findViewById(R.id.resultado_val);
 
+        x1.setText("0");
+        x2.setText("0");
+        x3.setText("0");
+
+        y1.setText("0");
+        y2.setText("0");
+        y3.setText("0");
+
+        z1.setText("0");
+        z2.setText("0");
+        z3.setText("0");
+
         b_calculo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final int a = Integer.parseInt(a1.getText().toString());
-                final int b = Integer.parseInt(a2.getText().toString());
-                final int c = Integer.parseInt(a3.getText().toString());
-                final int d = Integer.parseInt(b1.getText().toString());
-                final int e = Integer.parseInt(b2.getText().toString());
-                final int f = Integer.parseInt(b3.getText().toString());
-                final int g = Integer.parseInt(c1.getText().toString());
-                final int h = Integer.parseInt(c2.getText().toString());
-                final int i = Integer.parseInt(c3.getText().toString());
-                int determinante = CalculoDeterminante(a,b,c,d,e,f,g,h,i);
+
+                int a = Integer.parseInt(x1.getText().toString());
+                int b = Integer.parseInt(x2.getText().toString());
+                int c = Integer.parseInt(x3.getText().toString());
+                int d = Integer.parseInt(y1.getText().toString());
+                int e = Integer.parseInt(y2.getText().toString());
+                int f = Integer.parseInt(y3.getText().toString());
+                int g = Integer.parseInt(z1.getText().toString());
+                int h = Integer.parseInt(z2.getText().toString());
+                int i = Integer.parseInt(z3.getText().toString());
+                int determinante = CalculoDeterminante(a, b, c, d, e, f, g, h, i);
                 resultado.setText("Determinante = " + determinante);
             }
         });

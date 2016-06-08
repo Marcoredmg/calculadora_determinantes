@@ -17,7 +17,8 @@
         android:id="@+id/a1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        />
 
     <EditText
         android:layout_width="75dp"
@@ -103,9 +104,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
+        android:text="@string/botonCalcular"
         android:id="@+id/b_calculo"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="28dp"
         android:layout_below="@+id/resultado_val"
         android:layout_centerHorizontal="true" />
 
@@ -115,7 +116,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="..."
         android:id="@+id/resultado_val"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/c2"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

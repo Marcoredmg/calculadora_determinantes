@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Calculadora_beta</string>
+    <string name="app_name">Calculadora Determinantes</string>
+    <string name="botonCalcular">Calcular</string>
 </resources>
